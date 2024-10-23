@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+}
+
+.signup {
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px; /* Центрирование формы */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff; /* Белый фон для контраста */
+    padding: 20px; /* Отступы вокруг содержимого */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Нежная тень */
+}
+
+.signup h2 {
+    margin-bottom: 20px;
+    color: #333; /* Темный текст для лучшей читаемости */
+}
+
+.signup p {
+    margin-bottom: 20px;
+    color: #666; /* Мягкий цвет текста */
+}
+
+.signup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Промежуток между элементами формы */
+}
+
+.signup label {
+    text-align: left;
+    display: block;
+    font-size: 16px;
+    color: #555; /* Немного темнее текст метки */
+}
+
+.signup input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Полная ширина */
+}
+
+.signup button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff; /* Основной цвет Bootstrap */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup button:hover {
+    background-color: #0056b3; /* Более темный синий при наведении */
+}
+
+.signup a{
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+    text-decoration: none;
+    color: #007bff;
+}
+.ioio{
+    color: #666;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar img {
+    width: 100%;
+    height: auto;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+}
+
+.admin-panel {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+#userTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#userTable th, #userTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Стиль для модального окна */
+.login-container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; /* Полная высота экрана */
+}
+
+/* Модальное окно */
+#editModal, #deleteModal, #notificationModal {
+  display:none; /* Скрыто по умолчанию */
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  background-color: white; 
+  padding: 20px; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  z-index: 1000;
+  border-radius: 21px;
+}
+

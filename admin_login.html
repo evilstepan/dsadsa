@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в админку</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <section class="admin-login">
+        <h2>Вход в админку</h2>
+        <form id="adminLoginForm">
+            <div class="form-group">
+                <label for="admin-password">Пароль:</label>
+                <input type="password" id="admin-password" required>
+            </div>
+            <button type="submit">Войти</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById('adminLoginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Отменяем стандартное поведение формы
+
+            const password = document.getElementById('admin-password').value;
+
+            // Замените 'your_admin_password' на ваш реальный пароль
+            if (password === 'your_admin_password') {
+                // Если пароль правильный, перенаправляем на админку
+                window.location.href = 'admin.html';
+            } else {
+                alert("Неверный пароль!");
+            }
+        });
+    </script>
+
+    <style>
+        .admin-login {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</body>
+</html>

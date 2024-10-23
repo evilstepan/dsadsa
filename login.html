@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Вход</title>
+      <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+      <form id="loginForm" class="signup">
+            <h2>Вход в личный кабинет</h2>
+      <div class="form-group">
+            <label for="login-email">Электронная почта:</label>
+            <input type="email" id="login-email" required>
+        </div>
+        <div class="form-group">
+            <label for="login-password">Пароль:</label>
+            <input type="password" id="login-password" required>
+        </div>
+
+        <button type="submit">ВОЙТИ В ЛИЧНЫЙ КАБИНЕТ</button>
+        <a href="#">Забыли пароль?</a>
+        <a href="register.html">Зарегистрироваться</a>
+      </form>
+
+      <script>
+          document.getElementById('loginForm').addEventListener('submit', function(event) {
+              event.preventDefault(); // Отменяем стандартное поведение формы
+
+              const email = document.getElementById('login-email').value;
+              const password = document.getElementById('login-password').value;
+
+              // Получаем существующих пользователей из Local Storage
+              let users = JSON.parse(localStorage.getItem('users')) || [];
+
+              // Проверяем наличие пользователя с указанными данными
+              const user = users.find(user => user.email === email && user.password === password);
+
+              if (user) {
+                  alert("Вход успешен! Добро пожаловать, " + user.name);
+                  // Здесь можно перенаправить пользователя на страницу личного кабинета
+                  window.location.href = 'index7.html'; // Замените на вашу страницу личного кабинета
+              } else {
+                  alert("Неверный email или пароль.");
+              }
+          });
+      </script>
+</body>
+</html>
